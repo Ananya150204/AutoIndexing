@@ -13,6 +13,7 @@
 | `auto_index.control`     | Extension control file with metadata for PostgreSQL.                        |
 | `auto_index--1.0.sql`    | SQL script to set up the extension and required database objects.           |
 | `Makefile`               | Build configuration for compiling the extension with PGXS.                  |
+| `run_query.py`           | Spawns threads and runs queries from each of the threads. Helpful for running queries large number of times.                  |
 
 ### Build and Install
 
