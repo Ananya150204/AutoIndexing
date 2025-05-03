@@ -14,7 +14,7 @@ def run_query(thread_id):
         print(f"[Thread {thread_id}] ✅ Connected to PostgreSQL")
 
         cur = conn.cursor()
-        for _ in range(10):
+        for _ in range(20):
             query = "SELECT * FROM advisor WHERE i_id = '123';"
             cur.execute(query)
             rows = cur.fetchall()
@@ -33,7 +33,7 @@ def run_query(thread_id):
 
 def main():
     threads = []
-    num_threads = 10  # You can increase this if needed
+    num_threads = 1 
 
     for i in range(num_threads):
         thread = threading.Thread(target=run_query, args=(i,))
